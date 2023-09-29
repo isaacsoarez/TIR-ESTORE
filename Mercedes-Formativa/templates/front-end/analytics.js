@@ -21,10 +21,11 @@ darkMode.addEventListener('click', () =>{
 Orders.forEach(order =>{
     const tr = document.createElement('tr')
     const trContent = `
-    <td>${order.MateriaPrima}</td>
+    <td class="${order.MateriaPrima === 'Aço' ? 'danger' : order.MateriaPrima === 'Ferramentas' ? 'success' : 'primary'}">${order.MateriaPrima}</td>
     <td>${order.Produção}</td>
-    <td>${order.Fornecedor}</td>
-    <td class="${order.FreteKM === 'Declined' ? 'danger' : order.status === 'Pending' ? 'warning' : 'primary'}">${order.FreteKM}</td>
+    <td class="${order.Fornecedor === 'Partz' ? 'success' : order.Fornecedor === 'Yokohama' ? 'danger' : 'primary'  }">${order.Fornecedor}</td>
+    <td>${order.FreteKM}</td>
+    <td class="${order.status === 'Pendente' ? 'danger' : order.status === 'Enviado' ? 'warning' : 'primary'}">${order.status}</td>
     <td class="primary">Details</td>
     `;
     tr.innerHTML = trContent;
