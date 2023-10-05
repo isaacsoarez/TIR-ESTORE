@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+
+::-webkit-scrollbar{
+    width: 4px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ffffff;
+    border-radius: 20px;
+    
+}
+
+
+.body{background: #011627;
+    color: #fff;
+    background-image: url(img/car2.png);
+    background-size: cover; 
+    background-position: center;
+
+}
+
+.body2 {background: #011627;
+    color: #ffffff;
+    background-size: cover; 
+    background-position: center;
+    flex-direction: column; /* Para empilhar elementos verticalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribui uniformemente as imagens no espaço disponível */
+    width: 100%;
+    max-width: 850px; /* Define uma largura máxima para evitar que as imagens se espalhem muito em telas grandes */
+    margin-top: 250px; /* Adapte conforme necessário para o espaçamento desejado */
+    position: absolute; top: 160%; right: 27%;
+
+}
+
+.image-item {
+    flex: 1; /* Ocupa o espaço disponível igualmente entre as imagens */
+}
+
+.image-item img {
+    width: 100%; /* Garante que as imagens ocupem 100% da largura do contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 50%; /* Opcional: adiciona bordas arredondadas às imagens */
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.6s;
+
+}
+
+.image-item img:hover{
+    background-color: black;
+    border-color: #ffbb0086;
+    opacity: 0.6;color: rgba(255, 208, 0, 0.767);
+    border: 10px solid;
+}
+
+.body2 img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+    object-fit: cover; /* Evita que a imagem distorça */
+}
+
+.body2 h2{
+    position: absolute; top: 120%; left: 41%;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.body2 h3{
+    position: absolute; top: 120%; left: 43%;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 15%;
+    background: transparent;
+    transition: all .50s ease;
+    background-color: #0000008a;
+}
+
+.navlist li a {
+    color: #fff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+    padding: 25px;
+}
+
+.navlist li a:hover {
+    color: #ff0000;
+}
+
+.logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+.navlist{
+display: flex;
+}
+
+.navlist a {
+    margin:  0px 5px;
+    padding: 5px 10px;
+    color: #d6d6d6;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 30px;
+    color: #000000;
+    background: #ffffff;
+    border-radius: 30px;
+    font-size: 15px;
+    border: 2px solid transparent;
+    transition: all .40s ease;
+}
+
+.btn:hover{
+    border: 2px solid rgba(255, 0, 0, 0.699);
+    color: rgba(255, 0, 0, 0.699);
+    background: transparent;
+}
+
+#menu-icon{
+    color: #fff;
+    font-size: 38px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 0 15%;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,.3)), url();
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-text h1{
+    font-size: 80px;
+    font-weight: 800;
+    mask-border: 5px;
+}
+
+.main-text h1:hover{
+    color: #ff000096;
+    transition: 0.5s;
+}
+
+.main-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(231, 237, 244);
+}
+
+.main-text span{
+    color: #ff0000;
+}
+
+@media(max-width:1350px){
+    nav{
+        padding: 20px 5%;
+    }
+    section{
+        padding: 0px 5px; 
+    }
+}
+
+@media(max-width:950px){
+    .main-text h1{
+        font-size: 70px;
+    }
+    .main-text p{
+        font-size: 22px;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .btn{
+        padding: 9px 27px;
+    }
+}
+
+@media(max-width:860px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -800px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #000000;
+        transition: all .50s ease;
+        text-align:left ;
+    }
+
+    
+    .navlist a{
+        color: #fff;
+        padding: 1rem;
+        border-left: 2px solid rgba(255, 0, 0, 0.699);
+        margin: 1rem;
+        display: block;
+
+    }
+    .navlist a:hover{
+        background: #000000;
+        color:#f3f3f3 ;
+    }
+    .navlist.open{
+        top: 100%;
+    }
+}
+
+@media(max-width:750px){
+    .main-text h1{
+        font-size: 50px;
+    }
+}
+
